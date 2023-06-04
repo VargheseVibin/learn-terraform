@@ -4,8 +4,8 @@ resource "aws_instance" "mod-eg-vm" {
 }
 
 output "mod-eg-vm-name" {
-  var = toset([aws_instance.mod-eg-vm.arn, aws_instance.mod-eg-vm.ami])
+  value = toset([aws_instance.mod-eg-vm.arn, aws_instance.mod-eg-vm.ami])
 }
 
-var ami {}
-var instance_type {}
+variable ami {}
+variable instance_type {}
